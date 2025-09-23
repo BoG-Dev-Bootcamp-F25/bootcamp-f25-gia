@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Gia Google Search</title>
+        <link rel="stylesheet" type="text/css" href="styles/home.css" />
+    </head>
+
+    <body>
+        <div id="menu">
+            <a class="menu-item" href="https://about.google">About</a>
+            <a class="menu-item" id="store-link" href="https://store.google.com">Store</a>
+            <a class="menu-item" href="https://gmail.com">Gmail</a>
+            <a class="menu-item" href="https://www.google.com/imghp?hl=en">Images</a>
+            <a class="menu-item" href="results.html">
+              <img src="images/profile.png" alt="Profile" id="profile-pic"/>
+            </a>
+            <footer>
+                <p>Made by Gia Castro</p>
+            </footer>
+        </div>
+      
+        <div id="search">
+            <img src="images/logo.png" alt="Logo" id="main-logo"/>
+            <br />
+            <input id="search-bar" placeholder="Try Searching &quot;Gia&quot;"/>
+                <div id="search-buttons">
+                    <button class="search-button" id="enter-button">Google Search</button>
+                    <button class="search-button">I'm Feeling Lucky</button>
+                </div>
+        </div>
+
+        <script>
+            const searchBar = document.getElementById('search-bar');
+            const enterButton = document.getElementById('enter-button');
+            
+            function giaSearch() {
+                if (searchBar.value.trim().toLowerCase() === 'gia') {
+                    window.location.href = 'results.html';
+                }
+            }
+            
+            searchBar.addEventListener('keydown', function(event) {
+                if (event.key == 'Enter') {
+                    giaSearch();
+                }
+            });
+
+            enterButton.addEventListener('click', function() {
+                giaSearch();
+            });
+        </script>
+
+    </body>
+</html>

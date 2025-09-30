@@ -1,0 +1,16 @@
+#stats-title {
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.general-stats {
+    background-color: rgb(226, 226, 226);
+    padding: 20px;
+
+    width: 260px;
+    min-height: 200px;
+
+    font-size: 18px;
+    text-align: left;
+    
+}

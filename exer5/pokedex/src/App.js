@@ -36,23 +36,35 @@ function App() {
 
 
   return (
-  
     <div className='App'>
       <h1>Exercise 5 - PokeDex!</h1>
 
-      {pokemonData ? (
-        <>
-          <PokemonDisplay pokemonData={pokemonData} />
-          <StatsDisplay pokemonData={pokemonData} />
-        </>
-      ) : (
-        <p>Loading Pokémon...</p>
-      )}
-      
-      <Controls
-        onPrevClick={handlePrevClick}
-        onNextClick={handleNextClick}
-      />
+      <div className="pokedex-container">
+
+        <div className="left-column">
+          {pokemonData ? (
+            <>
+              <PokemonDisplay pokemonData={pokemonData} />
+              <Controls
+                onPrevClick={handlePrevClick}
+                onNextClick={handleNextClick}
+              />
+            </>
+          ) : (
+            <p>Loading Pokémon...</p>
+          )}
+        </div>
+
+        <div className="right-column">
+          {pokemonData ? (
+            <StatsDisplay pokemonData={pokemonData} />
+          ) : (
+            <p>Loading stats...</p>
+          )}
+        </div>
+
+      </div>
+
     </div>
   );
 }

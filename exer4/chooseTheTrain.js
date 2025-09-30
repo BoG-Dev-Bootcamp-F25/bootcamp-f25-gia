@@ -37,6 +37,12 @@ const railArray = await getRealTimeRailCoordinates();
  */
 function getKeysToArr(arrivals) {
   // TODO
+  const keys = [];
+  const first = arrivals[0];
+  for (let key in first) {
+    keys.push(key);
+  }
+  return keys;
 }
 
 /**
@@ -53,6 +59,13 @@ function getKeysToArr(arrivals) {
  */
 function getTrainComingIn1Minute(arrivals) {
   // TODO
+  const result = [];
+  arrivals.forEach(arrival => {
+    if (arrival.WAITING_TIME === '1 min') {
+      result.push(arrival);
+    }
+  });
+  return result;
 }
 
 /**
@@ -85,8 +98,19 @@ function getTrainComingIn1Minute(arrivals) {
  */
 function updateLineColor(arrivals) {
   // TODO
+  const blueLines = arrivals.filter(arrival => arrival.LINE === 'BLUE');
+
+  const pinkLines = blueLines.map(arrival => {
+    // Deep copy each object (shallow copy is fine here if nested objects are not present)
+    const copiedArrival = { ...arrival };
+    copiedArrival.LINE = 'PINK';
+    return copiedArrival;
+  });
+
+  return pinkLines;
 }
 
 console.log(getKeysToArr(railArray));
 console.log(getTrainComingIn1Minute(railArray));
 console.log(updateLineColor(railArray));
+// THIS DOES NOT WORK ALL THE WAY; I HAVE TO FIX SOME THINGS

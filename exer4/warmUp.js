@@ -17,6 +17,22 @@
  */
 function toLetterGrade(numGrade) {
   // TODO
+  if (typeof numGrade !== 'number' || numGrade < 0 || numGrade > 100) {
+    return "INVALID";
+  }
+  if (numGrade >= 90) {
+    return "A";
+  }
+  if (numGrade >= 80) {
+    return "B";
+  }
+  if (numGrade >= 70) {
+    return "C";
+  }
+  if (numGrade >= 60) {
+    return "D";
+  }
+  return "F";
 }
 
 /**
@@ -28,6 +44,7 @@ function toLetterGrade(numGrade) {
  */
 function getEvenElements(array) {
   // TODO
+  return array.filter(num => num % 2 === 0);
 }
 
 /**
@@ -41,6 +58,14 @@ function getEvenElements(array) {
  */
 function findLongestWord(string) {
   // TODO
+  const words = string.split(' ');
+  let maxLength = 0;
+  for (const word of words) {
+    if (word.length > maxLength) {
+      maxLength = word.length;
+    }
+  }
+  return maxLength;
 }
 
 /**
@@ -66,6 +91,7 @@ function findLongestWord(string) {
  */
 function combineObjects(object1, object2) {
   // TODO
+  return { ...object1, ...object2 };
 }
 
 /**
@@ -78,6 +104,11 @@ function combineObjects(object1, object2) {
  */
 function reverseArr(array) {
   // TODO
+  const reversedArray = [];
+  for (let i = array.length - 1; i >= 0; i--) {
+    reversedArray.push(array[i]);
+  }
+  return reversedArray;
 }
 
 // DO NOT EDIT BELOW THIS LINE -- the code is for testing purposes only!

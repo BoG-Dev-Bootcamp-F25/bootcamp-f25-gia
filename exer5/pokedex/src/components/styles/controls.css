@@ -1,4 +1,8 @@
 .changeButtons {
+    margin: 5px;
+}
+
+.arrow-button {
     background: white;
     border: none;
     margin: 5px;

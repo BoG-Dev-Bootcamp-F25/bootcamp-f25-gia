@@ -1,16 +1,15 @@
-#stats-title {
+#moves-title {
     font-size: 25px;
     margin-bottom: 20px;
 }
 
-.general-stats {
+.moves-list {
     background-color: rgb(226, 226, 226);
     padding: 20px;
 
     width: 40vh;
-    min-height: 200px;
+    height: 40vh;
 
     font-size: 18px;
     text-align: left;
-    
 }

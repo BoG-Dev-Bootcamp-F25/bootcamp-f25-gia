@@ -1,7 +1,7 @@
 import React from 'react';
-import left from './left.png';
-import right from './right.png';
-import './styles/controls.css';
+import left from './styles/left.png';
+import right from './styles/right.png';
+import './styles/arrows.css';
 
 // fix appearance on the buttons later so no margins between them
 function Controls({ onPrevClick, onNextClick }) {

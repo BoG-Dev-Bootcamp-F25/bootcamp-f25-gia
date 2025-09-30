@@ -2,11 +2,14 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 import PokemonDisplay from './components/pokemonDisplay';
 import StatsDisplay from './components/statsDisplay';
-import Controls from './components/controls';
+import MovesDisplay from './components/movesDisplay';
+import Controls from './components/arrows';
+import StatsToggle from './components/statsToggle';
 
 function App() {
   const [pokemonId, setPokemonId] = useState(1);
   const [pokemonData, setPokemonData] = useState(null);
+  const [view, setView] = useState('info');
   const URL = "https://pokeapi.co/api/v2/pokemon/"
 
   useEffect(() => {
@@ -56,11 +59,10 @@ function App() {
         </div>
 
         <div className="right-column">
-          {pokemonData ? (
-            <StatsDisplay pokemonData={pokemonData} />
-          ) : (
-            <p>Loading stats...</p>
-          )}
+          {pokemonData && view === 'info' && <StatsDisplay pokemonData={pokemonData} />}
+          {pokemonData && view === 'moves' && <MovesDisplay pokemonData={pokemonData} />}
+          
+          <StatsToggle currentView={view} setView={setView} />
         </div>
 
       </div>

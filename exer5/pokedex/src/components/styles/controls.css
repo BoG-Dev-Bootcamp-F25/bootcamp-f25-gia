@@ -9,3 +9,8 @@
     padding: 0;
     cursor: pointer;
 }
+
+.arrow {
+    width: 100px;
+    margin: 10px;
+}

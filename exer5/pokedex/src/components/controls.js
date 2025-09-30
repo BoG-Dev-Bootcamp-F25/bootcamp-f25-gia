@@ -8,10 +8,10 @@ function Controls({ onPrevClick, onNextClick }) {
     return (
         <div id="change-buttons">
             <button className="arrow-button" onClick={onPrevClick}>
-                <img src={left} style={{ width: '70px'}}/>
+                <img className="arrow" src={left}/>
             </button>
             <button className="arrow-button" onClick={onNextClick}>
-                <img src={right} style={{ width: '70px', margin: '0px'}}/>
+                <img className="arrow" src={right}/>
             </button>
         </div>
     );

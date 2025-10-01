@@ -1,4 +1,9 @@
-# Getting Started with Create React App
+# Gia's PokeDex
+This project provides users with a complete PokeDex that
+takes users through the [PokeAPI](https://pokeapi.co/docs/v2#pokemon). Use it to easily view any pokemon in the API along with their stats, moves, and types.
+
+# Video Demonstration
+Click [here](pokedex_demo.mov) to watch the demonstration of the deployed PokeDex.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

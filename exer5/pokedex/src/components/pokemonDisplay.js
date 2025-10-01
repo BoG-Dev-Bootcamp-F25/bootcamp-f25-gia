@@ -1,4 +1,5 @@
 import React from 'react';
+import './styles/pokemonDisplay.css'
 
 function PokemonDisplay({ pokemonData }) {
     return (

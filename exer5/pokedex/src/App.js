@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import PokemonDisplay from './components/pokemonDisplay';
+import Types from './components/types';
 import StatsDisplay from './components/statsDisplay';
 import MovesDisplay from './components/movesDisplay';
 import Controls from './components/arrows';
@@ -48,6 +49,7 @@ function App() {
           {pokemonData ? (
             <>
               <PokemonDisplay pokemonData={pokemonData} />
+              <Types pokemonData={pokemonData}/>
               <Controls
                 onPrevClick={handlePrevClick}
                 onNextClick={handleNextClick}

@@ -7,8 +7,10 @@
     background-color: rgb(226, 226, 226);
     padding: 20px;
 
-    width: 40vh;
-    min-height: 200px;
+    width: 270px;
+    min-height: 350px;
+    max-height: 350px;
+    overflow: auto;
 
     font-size: 18px;
     text-align: left;

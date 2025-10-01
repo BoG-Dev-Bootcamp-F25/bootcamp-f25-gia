@@ -1,0 +1,16 @@
+#types-header{
+    font-size: 20px;
+    margin-bottom: 0;
+}
+
+.type-badge {
+  display: inline-block;
+
+  padding: 4px 12px;
+  margin-right: 5px;
+  border-radius: 4px;
+
+  color: white;
+  font-weight: bold;
+  text-transform: capitalize;
+}

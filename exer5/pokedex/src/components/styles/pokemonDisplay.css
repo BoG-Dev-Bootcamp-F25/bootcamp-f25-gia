@@ -1,0 +1,6 @@
+h2 {
+    border: 2px solid black;
+    border-radius: 7px;
+    background-color: rgb(229, 229, 229);
+    padding: 8px;
+}

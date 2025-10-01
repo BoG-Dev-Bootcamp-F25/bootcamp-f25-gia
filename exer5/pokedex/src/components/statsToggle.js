@@ -8,7 +8,7 @@ function StatsToggle({ currentView, setView }) {
     }
 
     let movesButtonClass = 'toggle-button';
-    if (currentView === 'info') {
+    if (currentView === 'moves') {
         movesButtonClass += ' active';
     }
 

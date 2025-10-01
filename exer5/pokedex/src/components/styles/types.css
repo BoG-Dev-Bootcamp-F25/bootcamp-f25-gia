@@ -1,4 +1,8 @@
-#types-header{
+.types {
+    text-align: left;
+}
+
+#types-header {
     font-size: 20px;
     margin-bottom: 0;
 }

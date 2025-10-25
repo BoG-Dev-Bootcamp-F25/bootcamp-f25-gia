@@ -4,7 +4,12 @@ export async function GET(
   request: Request,
   context: { params: { name: string } }
 ) {
-  const pokemonName = context.params.name.toLowerCase();
+  // debugging rah
+  console.log('CONTEXT CHECK');
+  console.log(context.params);
+
+  const params = await context.params;
+  const pokemonName = params.name.toLowerCase();
 
   try {
     const res = await fetch(

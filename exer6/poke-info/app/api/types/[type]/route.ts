@@ -4,7 +4,12 @@ export async function GET(
   request: Request,
   context: { params: { type: string } }
 ) {
-  const typeName = context.params.type.toLowerCase();
+  // debugging rah
+  console.log('CONTEXT CHECK');
+  console.log(context.params);
+
+  const params = await context.params;
+  const typeName = params.type.toLowerCase();
 
   try {
     const res = await fetch(`https://pokeapi.co/api/v2/type/${typeName}`);

@@ -1,10 +1,10 @@
 import { NextResponse } from 'next/server';
-import { createTicket } from '../../../server/mongodb/actions/createTicket';
+import { createUser } from '@/server/mongodb/actions/createUser';
 
 export async function POST(request: Request) {
   try {
     const body = await request.json();
-    const success = await createTicket(body);
+    const success = await createUser(body);
 
     if (success) {
       return NextResponse.json({ message: "Success" }, { status: 200 });
